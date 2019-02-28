@@ -1,0 +1,151 @@
+{% macro jpg(name, alt='Image') %}
+<img
+  src="images/{{ name }}-1800.jpg"
+  srcset="images/{{ name }}-400.jpg 400w, images/{{ name }}-800.jpg 800w, images/{{ name }}-1200.jpg 1200w, images/{{ name }}-1800.jpg 1800w"
+  alt="{{ alt }}"
+/>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8">
+        <title>{{META.telium.page_name}}</title>
+        {%include "meta/_icons.html"%}
+
+        {%include "meta/_social.html"%}
+        {% if env == 'production' %}
+        <link href="css/main-app.css" rel="stylesheet">
+        {% endif %}
+
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+          crossorigin="anonymous">
+        </script>
+
+        <!--Typekit-->
+        <!-- DIN 2014 only -->
+        <link rel="stylesheet" href="https://use.typekit.net/dsx2uhv.css">
+        <!-- Jubilat include -->
+        <!-- <link rel="stylesheet" href="https://use.typekit.net/bvr3gvp.css"> -->
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    </head>
+
+    <body>
+      {% include "partials/_nav.html" %}
+<!--       {% include "partials/_header.html" %} -->
+    
+    <div class="gif-container">
+      <div>
+        <img class="top" src="./images/nbn.gif">
+        <h1 class="centered">North by Northwestern</h1>
+      </div>
+    </div>
+
+      <div class="article-container">
+        <!--Features-->
+        <center class="heading">FEATURES</center>
+        <div class="features-block">
+        <div class="features-container">
+          {% for item in DATA.Sheet1 %}
+            {% if item.SECTION == "Features" %}
+                <div class="feature">
+                  <p class="headline-text">{{ item.HEADLINE }}</p>
+                  <p class="deck-text">{{ item.DECK }}</p>
+                  <p class="by"> by <a href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+                </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        </div>
+
+        <hr>
+
+        <!--Pregame-->
+        <div class="title-row">
+        <p class="upright-text">PREGAME</p>
+        <div>
+        {% for item in DATA.Sheet1 %}
+          {% if item.SECTION == "Pregame" %}
+              {% if item.SLUG == "noodles" %}
+                <div class="pregame">
+                  <p class="headline-text">{{ item.HEADLINE }}</p>
+                  <p class="deck-text">{{ item.DECK }}</p>
+                  <p class="by"> by <a href="http://www.northbynorthwestern.com/author/daviddeloso/">David Deloso</a> & <a href="http://www.northbynorthwestern.com/author/sophialo2/">Sophia Lo</a>
+                  </p>
+
+                </div>
+
+              {% else %}
+              <div class="pregame">
+                <p class="headline-text">{{ item.HEADLINE }}</p>
+                <p class="deck-text">{{ item.DECK }}</p>
+                <p class="by"> by <a href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+              </div>
+              {% endif %}
+          {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+
+        <hr>
+
+        <!--Dance Floor-->
+        <center class="heading">DANCE FLOOR</center>
+        <div class="dancefloor-container">
+          {% for item in DATA.Sheet1 %}
+            {% if item.SECTION == "DanceFloor" %}
+                <div class="dancefloor">
+                  <p class="headline-text">{{ item.HEADLINE }}</p>
+                  <p class="deck-text">{{ item.DECK }}</p>
+                  <p class="by"> by <a href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+                </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <hr>
+
+        <!--Hangover-->
+        <div class="title-row">
+        <p class="upright-text">HANGOVER</p>
+        <div>
+        {% for item in DATA.Sheet1 %}
+          {% if item.SECTION == "Hangover" %}
+              <div class="hangover">
+                <p class="headline-text">{{ item.HEADLINE }}</p>
+                <p class="deck-text">{{ item.DECK }}</p>
+                <p class="by"> by <a href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+              </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+
+      </div>
+      {% include "partials/_footer.html" %}
+      <script type="text/javascript">window.tweetText = "{{META.share.twitter.share_tweet}}";</script>
+    </body>
+</html>
+
+
+{% block js %}
+<script type="text/javascript" src="js/main-app.bundle.js"></script>
+
+{% endblock %}

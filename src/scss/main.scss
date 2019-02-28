@@ -1,0 +1,134 @@
+@import 'bootstrap';
+
+@import 'breakpoints';
+@import 'mixins';
+@import 'colors/base';
+@import 'fonts';
+
+@import 'elements';
+@import 'navigation';
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'project';
+
+
+.article-container{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.top {
+	width: 100%;
+}
+
+.gif-container {
+	position: relative;
+	text-align: center;
+	color: black;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Bungee', cursive;
+	font-size: 500%;
+	background: -webkit-linear-gradient(#0F2027, #dc2430);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.by {
+	font-family: 'Noto Serif KR', serif;	
+}
+
+a {
+	color:black;
+	font-family: 'Noto Serif KR', serif;
+}
+
+
+a:hover {
+	color: #FF0099;
+	font-size:125%;
+}
+
+.title-row {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.features-block {
+	background-color: white;
+	width:100%;
+}
+
+.features-container {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.feature {
+  width: 220px;
+  text-align: center;
+  background-color: white;
+}
+
+.headline-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	font-weight:600;
+}
+
+.deck-text {
+	font-family: 'Assistant', serif;
+}
+
+.upright-text {
+	font-family: 'Montserrat', sans-serif;
+	font-weight:800;
+	font-size: 300%;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.heading {
+	font-family: 'Montserrat', sans-serif;
+	font-weight:800;
+	font-size: 300%;
+}
+
+.pregame {
+  width: 600px;
+  background-color: white;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.dancefloor-container {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.dancefloor {
+  width: 220px;
+  text-align: center;
+  background-color: white;
+}
+
+.hangover {
+  width: 600px;
+  background-color: white;
+  text-align: left;
+  margin-left: 10%;
+}
+
+
