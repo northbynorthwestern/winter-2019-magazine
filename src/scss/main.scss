@@ -26,6 +26,7 @@
 	position: relative;
 	text-align: center;
 	color: black;
+	margin-bottom: 30px;
 }
 
 .centered {
@@ -41,17 +42,62 @@
 
 }
 
-.by {
-	font-family: 'Noto Serif KR', serif;	
+.right-corner {
+	position: absolute;
+	top: 18%;
+	left: 86%;
+	transform: translate(-50%, -50%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 6vw;
+	font-weight: 800;
+	color: white;
+
 }
 
-a {
+a.right-corner:hover {
+	color: #FF0099;
+}
+
+.left-corner {
+	position: absolute;
+	top: 82%;
+	left: 14%;
+	transform: translate(-50%, -50%);
+}
+
+.left-corner-top {
+	margin-bottom: 1px;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3vw;
+	font-weight: 800;
+	color: white;
+
+}
+
+.left-corner-bottom {
+	margin-top: 1px;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3vw;
+	font-weight: 800;
+	color: white;
+
+}
+
+.by {
+	font-family: 'Noto Serif KR', serif;
+	font-size: 90%;	
+}
+
+a.author-link  {
 	color:black;
 	font-family: 'Noto Serif KR', serif;
+	font-size: 90%;
 }
 
 
-a:hover {
+a.author-link:hover {
 	color: #FF0099;
 	font-size:125%;
 }
@@ -59,7 +105,7 @@ a:hover {
 .title-row {
   display: inline-flex; /* or inline-flex */
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .features-block {
@@ -82,18 +128,19 @@ a:hover {
 
 .headline-text {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 150%;
+	font-size: 100%;
 	font-weight:600;
 }
 
 .deck-text {
 	font-family: 'Assistant', serif;
+	font-size: 90%;
 }
 
 .upright-text {
 	font-family: 'Montserrat', sans-serif;
 	font-weight:800;
-	font-size: 300%;
+	font-size: 4vw;
 	writing-mode: vertical-rl;
 	text-orientation: upright;
 }
@@ -101,14 +148,14 @@ a:hover {
 .heading {
 	font-family: 'Montserrat', sans-serif;
 	font-weight:800;
-	font-size: 300%;
+	font-size: 4vw;
 }
 
 .pregame {
   width: 600px;
   background-color: white;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .dancefloor-container {
@@ -128,7 +175,7 @@ a:hover {
   width: 600px;
   background-color: white;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 
