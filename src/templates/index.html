@@ -50,40 +50,61 @@
     <body>
 <!--       {% include "partials/_nav.html" %} -->
 <!--       {% include "partials/_header.html" %} -->
-    
+    <div class="topnav" id="myTopnav">
+      <a class="scroll_button" href="#Pregame">Pregame</a>
+      <a class="scroll_button" href="#Dancefloor">Dance Floor</a>
+      <a class="scroll_button" href="#Features">Features</a>
+      <a class="scroll_button" href="#Hangover">Hangover</a>
+    </div>
+
     <div class="gif-container">
       <div>
         <img class="top" src="./images/cover3.jpeg">
-        <div class="left-corner">
+<!--         <div class="left-corner">
           <h1 class="left-corner-top">North by</h1>
           <h1 class="left-corner-bottom">Northwestern</h1>
-        </div>
+        </div> -->
 <!--         <h1 class="right-corner">Bold</h1> -->
         <a class="right-corner" href="https://www.yahoo.com">Bold</a>
       </div>
     </div>
 
       <div class="article-container">
-        <!--Features-->
-        <center class="heading">FEATURES</center>
-        <div class="features-block">
-        <div class="features-container">
-          {% for item in DATA.Sheet1 %}
-            {% if item.SECTION == "Features" %}
-                <div class="feature">
-                  <p class="headline-text">{{ item.HEADLINE }}</p>
-                  <p class="deck-text">{{ item.DECK }}</p>
-                  <p class="by"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
-                </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-        </div>
-
-        <hr>
-
         <!--Pregame-->
-        <div class="title-row">
+
+        <div class="title-row" id="Pregame">
+        <p class="upright-text">PREGAME</p>
+
+              <div class="pregame-noods">
+                <p class="headline-text">Send Noods</p>
+                <p class="deck-text">We tasted all the noodles so you don't have to (but you probably should).</p>
+                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/daviddeloso/">David Deloso</a> & <a class="author-link" href="http://www.northbynorthwestern.com/author/sophialo2/">Sophia Lo</a></p>
+              </div>
+
+              <div>
+              <div class="inside-pregame">
+              <div class="pregame-small">
+                <p class="headline-text">An ASMR Star is Born</p>
+                <p class="deck-text">Insight from NU alum and YouTube’s second-most-famous ASMRtist</p>
+                <p class="by"> by <a class="author-link" href="N/A">Hayley Miller</a></p>
+              </div>
+
+              <div class="pregame-small">
+                <p class="headline-text">The name’s Bond, tuition bond</p>
+                <p class="deck-text">How a sweet deal in the 1850s could have gotten you free tuition</p>
+                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/duncanagnew/">Duncan Agnew</a></p>
+              </div>
+              </div>
+
+              <div class="pregame">
+                <p class="headline-text">Sending it Back</p>
+                <p class="deck-text">Evanston’s own post office is a New Deal relic</p>
+                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/mollyglick/">Molly Glick</a></p>
+              </div>
+              </div>
+
+        </div>
+<!--         <div class="title-row" id="Pregame">
         <p class="upright-text">PREGAME</p>
         <div>
         {% for item in DATA.Sheet1 %}
@@ -107,12 +128,12 @@
           {% endif %}
         {% endfor %}
         </div>
-        </div>
+        </div> -->
 
         <hr>
 
         <!--Dance Floor-->
-        <center class="heading">DANCE FLOOR</center>
+        <center class="heading" id="Dancefloor">DANCE FLOOR</center>
         <div class="dancefloor-container">
           {% for item in DATA.Sheet1 %}
             {% if item.SECTION == "DanceFloor" %}
@@ -127,8 +148,29 @@
 
         <hr>
 
+        <!--Features-->
+        <div class="FIRST">
+        <center class="heading" id="Features">FEATURES</center>
+        <div class="features-block">
+        <div class="features-container">
+          {% for item in DATA.Sheet1 %}
+            {% if item.SECTION == "Features" %}
+                <div class="feature" style="background-image: url('./images/money-talks-card.png');">
+                  <p class="headline-text-card">{{ item.HEADLINE }}</p>
+                  <p class="deck-text-card">{{ item.DECK }}</p>
+                  <p class="by-card"> by <a class="author-link-card" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+                </div>
+
+            {% endif %}
+          {% endfor %}
+        </div>
+        </div>
+        </div>
+
+        <hr>
+
         <!--Hangover-->
-        <div class="title-row">
+        <div class="title-row" id="Hangover">
         <p class="upright-text">HANGOVER</p>
         <div>
         {% for item in DATA.Sheet1 %}
@@ -141,6 +183,7 @@
           {% endif %}
         {% endfor %}
         </div>
+        <img class="morty" src="./images/hangover.png">
         </div>
 
       </div>

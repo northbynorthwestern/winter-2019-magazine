@@ -13,6 +13,31 @@
 @import 'project';
 
 
+.topnav {
+  background-image: linear-gradient(to right, #100F17 , #0F181E);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.topnav a:hover {
+  background-color: #70E0DD;
+  color: black;
+}
+
+
+
+
 .article-container{
 	margin-left: 3%;
 	margin-right: 3%;
@@ -44,18 +69,18 @@
 
 .right-corner {
 	position: absolute;
-	top: 18%;
-	left: 86%;
+	top: 35%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: 'Montserrat', sans-serif;
-	font-size: 6vw;
+	font-size: 8vw;
 	font-weight: 800;
 	color: white;
 
 }
 
 a.right-corner:hover {
-	color: #FF0099;
+	color: #70E0DD;
 }
 
 .left-corner {
@@ -88,17 +113,37 @@ a.right-corner:hover {
 .by {
 	font-family: 'Noto Serif KR', serif;
 	font-size: 90%;	
+	color: black;
 }
 
+.by-card {
+	font-family: 'Noto Serif KR', serif;
+	font-size: 90%;	
+	color: white;
+}
+
+
 a.author-link  {
-	color:black;
+	color: black;
 	font-family: 'Noto Serif KR', serif;
 	font-size: 90%;
 }
 
 
 a.author-link:hover {
-	color: #FF0099;
+	color: #FF3727;
+	font-size:125%;
+}
+
+a.author-link-card  {
+	color: white;
+	font-family: 'Noto Serif KR', serif;
+	font-size: 90%;
+}
+
+
+a.author-link-card:hover {
+	color: #FF3727;
 	font-size:125%;
 }
 
@@ -122,19 +167,35 @@ a.author-link:hover {
 
 .feature {
   width: 220px;
+  height: 440px;
   text-align: center;
-  background-color: white;
+
+}
+
+.headline-text-card {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	font-weight:600;
+	color: white;
+}
+
+.deck-text-card {
+	font-family: 'Assistant', serif;
+	font-size: 90%;
+	color: white;
 }
 
 .headline-text {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 100%;
 	font-weight:600;
+	color: black;
 }
 
 .deck-text {
 	font-family: 'Assistant', serif;
 	font-size: 90%;
+	color: black;
 }
 
 .upright-text {
@@ -158,6 +219,27 @@ a.author-link:hover {
   margin-left: 5%;
 }
 
+.pregame-noods {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  text-align: left;
+  margin-left: 5%;	
+}
+
+.pregame-small {
+  width: 300px;
+  background-color: white;
+  text-align: left;
+  margin-left: 5%;	
+}
+
+.inside-pregame {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
 .dancefloor-container {
   display: inline-flex; /* or inline-flex */
   justify-content: space-around;
@@ -176,6 +258,11 @@ a.author-link:hover {
   background-color: white;
   text-align: left;
   margin-left: 5%;
+}
+
+.morty {
+	height: 384px;
+	width: 340px;
 }
 
 
