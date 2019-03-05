@@ -51,10 +51,11 @@
 <!--       {% include "partials/_nav.html" %} -->
 <!--       {% include "partials/_header.html" %} -->
     <div class="topnav" id="myTopnav">
-      <a class="scroll_button" href="#Pregame">Pregame</a>
-      <a class="scroll_button" href="#Dancefloor">Dance Floor</a>
-      <a class="scroll_button" href="#Features">Features</a>
       <a class="scroll_button" href="#Hangover">Hangover</a>
+      <a class="scroll_button" href="#Features">Features</a>
+      <a class="scroll_button" href="#Dancefloor">Dance Floor</a>
+      <a class="scroll_button" href="#Pregame">Pregame</a>
+      <img class="logo" src="./images/nbn.png" style="float:left">
     </div>
 
     <div class="gif-container">
@@ -74,32 +75,31 @@
 
         <div class="title-row" id="Pregame">
         <p class="upright-text">PREGAME</p>
-
-              <div class="pregame-noods">
-                <p class="headline-text">Send Noods</p>
-                <p class="deck-text">We tasted all the noodles so you don't have to (but you probably should).</p>
-                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/daviddeloso/">David Deloso</a> & <a class="author-link" href="http://www.northbynorthwestern.com/author/sophialo2/">Sophia Lo</a></p>
+              <div class="pregame-noods" style="background-image: url('./images/send-noods-card.png');">
+                <p class="headline-text-card">Send Noods</p>
+                <p class="deck-text-card">We tasted all the noodles so you don't have to (but you probably should).</p>
+                <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/daviddeloso/">David Deloso</a> & <a class="author-link-card" href="http://www.northbynorthwestern.com/author/sophialo2/">Sophia Lo</a></p>
               </div>
 
               <div>
               <div class="inside-pregame">
-              <div class="pregame-small">
-                <p class="headline-text">An ASMR Star is Born</p>
-                <p class="deck-text">Insight from NU alum and YouTube’s second-most-famous ASMRtist</p>
-                <p class="by"> by <a class="author-link" href="N/A">Hayley Miller</a></p>
+              <div class="pregame-small" style="background-image: url('./images/asmr.png');">
+                <p class="headline-text-card">An ASMR Star is Born</p>
+                <p class="deck-text-card">Insight from NU alum and YouTube’s second-most-famous ASMRtist</p>
+                <p class="by-card"> by <a class="author-link-card" href="N/A">Hayley Miller</a></p>
               </div>
 
-              <div class="pregame-small">
-                <p class="headline-text">The name’s Bond, tuition bond</p>
-                <p class="deck-text">How a sweet deal in the 1850s could have gotten you free tuition</p>
-                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/duncanagnew/">Duncan Agnew</a></p>
+              <div class="pregame-small" style="background-image: url('./images/tuition-bond-card.png');">
+                <p class="headline-text-card">The name’s Bond, tuition bond</p>
+                <p class="deck-text-card">How a sweet deal in the 1850s could have gotten you free tuition</p>
+                <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/duncanagnew/">Duncan Agnew</a></p>
               </div>
               </div>
 
-              <div class="pregame">
-                <p class="headline-text">Sending it Back</p>
-                <p class="deck-text">Evanston’s own post office is a New Deal relic</p>
-                <p class="by"> by <a class="author-link" href="http://www.northbynorthwestern.com/author/mollyglick/">Molly Glick</a></p>
+              <div class="pregame" style="background-image: url('./images/send-it-back-card.png');">
+                <p class="headline-text-card">Sending it Back</p>
+                <p class="deck-text-card">Evanston’s own post office is a New Deal relic</p>
+                <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/mollyglick/">Molly Glick</a></p>
               </div>
               </div>
 
@@ -138,6 +138,7 @@
           {% for item in DATA.Sheet1 %}
             {% if item.SECTION == "DanceFloor" %}
                 <div class="dancefloor">
+                  <img src="./images/letters-to-parents.png">
                   <p class="headline-text">{{ item.HEADLINE }}</p>
                   <p class="deck-text">{{ item.DECK }}</p>
                   <p class="by"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
@@ -155,11 +156,13 @@
         <div class="features-container">
           {% for item in DATA.Sheet1 %}
             {% if item.SECTION == "Features" %}
-                <div class="feature" style="background-image: url('./images/money-talks-card.png');">
+              <div class="feature-background" style="background-image: url('./images/money-talks-card.png');">
+                <div class="feature">
                   <p class="headline-text-card">{{ item.HEADLINE }}</p>
-                  <p class="deck-text-card">{{ item.DECK }}</p>
+                  <p class="deck-text-card"  style="padding: 10px;">{{ item.DECK }}</p>
                   <p class="by-card"> by <a class="author-link-card" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
                 </div>
+              </div>
 
             {% endif %}
           {% endfor %}
@@ -176,14 +179,18 @@
         {% for item in DATA.Sheet1 %}
           {% if item.SECTION == "Hangover" %}
               <div class="hangover">
-                <p class="headline-text">{{ item.HEADLINE }}</p>
-                <p class="deck-text">{{ item.DECK }}</p>
-                <p class="by"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
+                <p class="headline-text-hangover">{{ item.HEADLINE }}</p>
+                <p class="deck-text-hangover">{{ item.DECK }}</p>
+                <p class="by-hangover"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
               </div>
           {% endif %}
         {% endfor %}
         </div>
-        <img class="morty" src="./images/hangover.png">
+        <div class="square"></div>
+        <div>
+          <div class="square"></div>
+          <img class="morty" src="./images/hangover.png">
+        </div>
         </div>
 
       </div>

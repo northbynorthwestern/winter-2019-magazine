@@ -13,6 +13,13 @@
 @import 'project';
 
 
+.logo {
+	width: 6%;
+	height: 6%;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
 .topnav {
   background-image: linear-gradient(to right, #100F17 , #0F181E);
   overflow: hidden;
@@ -20,11 +27,11 @@
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   text-decoration: none;
   font-size: 1.5vw;
   font-family: 'Montserrat', sans-serif;
@@ -45,13 +52,14 @@
 
 .top {
 	width: 100%;
+	border-bottom: 10px solid;
 }
 
 .gif-container {
 	position: relative;
 	text-align: center;
 	color: black;
-	margin-bottom: 30px;
+	margin-bottom: 5%;
 }
 
 .centered {
@@ -116,6 +124,13 @@ a.right-corner:hover {
 	color: black;
 }
 
+.by-hangover {
+	font-family: 'Noto Serif KR', serif;
+	font-size: 90%;	
+	color: black;
+	margin-top: 2px;
+}
+
 .by-card {
 	font-family: 'Noto Serif KR', serif;
 	font-size: 90%;	
@@ -166,10 +181,17 @@ a.author-link-card:hover {
 }
 
 .feature {
-  width: 220px;
-  height: 440px;
+  width: 80%;
+  height: 60%;
   text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  margin: auto;
 
+}
+
+.feature-background {
+  height: 440px;
+  width: 220px;	
 }
 
 .headline-text-card {
@@ -183,6 +205,21 @@ a.author-link-card:hover {
 	font-family: 'Assistant', serif;
 	font-size: 90%;
 	color: white;
+}
+
+.headline-text-hangover {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	font-weight:600;
+	color: black;
+	height: 2px;
+}
+
+.deck-text-hangover {
+	font-family: 'Assistant', serif;
+	font-size: 90%;
+	color: black;
+	margin-bottom: 2px;
 }
 
 .headline-text {
@@ -204,34 +241,41 @@ a.author-link-card:hover {
 	font-size: 4vw;
 	writing-mode: vertical-rl;
 	text-orientation: upright;
+	align-self: flex-start;
 }
 
 .heading {
 	font-family: 'Montserrat', sans-serif;
 	font-weight:800;
 	font-size: 4vw;
+	margin-bottom: 2%;
 }
 
 .pregame {
-  width: 600px;
+  width: 95%;
+  height: 38%;
   background-color: white;
   text-align: left;
   margin-left: 5%;
+  padding-left: 2%;
 }
 
 .pregame-noods {
-  width: 300px;
-  height: 400px;
+  width: 45%;
+  min-height: 420px;
+  height: 460px;
   background-color: white;
   text-align: left;
-  margin-left: 5%;	
+  margin: auto;	
+  padding-left: 2%;
 }
 
 .pregame-small {
-  width: 300px;
+  width: 45%;
   background-color: white;
   text-align: left;
-  margin-left: 5%;	
+  margin-left: 5%;
+  padding-left: 2%;	
 }
 
 .inside-pregame {
@@ -248,21 +292,29 @@ a.author-link-card:hover {
 }
 
 .dancefloor {
-  width: 220px;
+  width: 30%;
   text-align: center;
   background-color: white;
 }
 
 .hangover {
-  width: 600px;
+  width: 99%;
   background-color: white;
   text-align: left;
   margin-left: 5%;
 }
 
 .morty {
-	height: 384px;
-	width: 340px;
+	height: 345.6px;
+	width: 306px;
 }
+
+.square {
+  height: 50px;
+  width: 100px;
+  background-color: white;
+}
+
+
 
 
