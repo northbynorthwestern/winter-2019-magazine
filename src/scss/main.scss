@@ -25,6 +25,13 @@
   overflow: hidden;
 }
 
+.fixed-nav topnav {
+  position: fixed;
+  top:0;
+  z-index: 1;
+}
+
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
@@ -128,7 +135,7 @@ a.right-corner:hover {
 	font-family: 'Noto Serif KR', serif;
 	font-size: 90%;	
 	color: black;
-	margin-top: 2px;
+	margin-top: 10px;
 }
 
 .by-card {
@@ -168,6 +175,20 @@ a.author-link-card:hover {
   flex-wrap: nowrap;
 }
 
+.title-row-pregame {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+	.title-row-pregame {
+  		display: inline-flex; /* or inline-flex */
+  		justify-content: space-around;
+  		flex-wrap: wrap;
+	}
+}
+
 .features-block {
 	background-color: white;
 	width:100%;
@@ -183,7 +204,7 @@ a.author-link-card:hover {
 .feature {
   width: 80%;
   height: 60%;
-  text-align: center;
+  text-align: left;
   background: rgba(0, 0, 0, 0.5);
   margin: auto;
 
@@ -191,7 +212,8 @@ a.author-link-card:hover {
 
 .feature-background {
   height: 440px;
-  width: 220px;	
+  width: 220px;
+  margin-top: 20px;
 }
 
 .headline-text-card {
@@ -201,25 +223,35 @@ a.author-link-card:hover {
 	color: white;
 }
 
+.headline-text-feature {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	font-weight:600;
+	color: white;
+	padding-top: 10%
+}
+
 .deck-text-card {
 	font-family: 'Assistant', serif;
 	font-size: 90%;
 	color: white;
+
 }
 
-.headline-text-hangover {
+.headline-text-simple {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 100%;
 	font-weight:600;
 	color: black;
-	height: 2px;
+	margin: auto;
+
 }
 
-.deck-text-hangover {
+.deck-text-simple {
 	font-family: 'Assistant', serif;
 	font-size: 90%;
 	color: black;
-	margin-bottom: 2px;
+	margin: auto;
 }
 
 .headline-text {
@@ -262,13 +294,27 @@ a.author-link-card:hover {
 
 .pregame-noods {
   width: 45%;
-  min-height: 420px;
+
   height: 460px;
   background-color: white;
   text-align: left;
   margin: auto;	
   padding-left: 2%;
 }
+
+@media screen and (max-width: 600px) {
+	.pregame-noods {
+  		width: 80%;
+  		height: 230px;
+  		background-color: white;
+  		text-align: left;
+  		margin: auto;	
+  		padding-left: 2%;
+
+	}
+}
+
+
 
 .pregame-small {
   width: 45%;
@@ -284,6 +330,15 @@ a.author-link-card:hover {
   flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 600px) {
+.inside-pregame {
+  display: inline-flex; /* or inline-flex */
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding-top: 5%;
+}
+}
+
 .dancefloor-container {
   display: inline-flex; /* or inline-flex */
   justify-content: space-around;
@@ -293,8 +348,26 @@ a.author-link-card:hover {
 
 .dancefloor {
   width: 30%;
-  text-align: center;
+  text-align: left;
   background-color: white;
+}
+
+.dance-img {
+	width: 100%;
+	height: 50%;
+}
+
+@media screen and (max-width: 800px) {
+	.dancefloor {
+		width: 34%;
+  		text-align: left;
+  		background-color: white;
+	}
+
+	.dance-img {
+		width: 100%;
+		height: 50%;
+	}
 }
 
 .hangover {
@@ -311,6 +384,12 @@ a.author-link-card:hover {
 
 .square {
   height: 50px;
+  width: 100px;
+  background-color: white;
+}
+
+.square-nav {
+  height: 60px;
   width: 100px;
   background-color: white;
 }
