@@ -127,21 +127,21 @@ a.right-corner:hover {
 
 .by {
 	font-family: 'Noto Serif KR', serif;
-	font-size: 90%;	
+	font-size: 80%;	
 	color: black;
 	margin-top: 4%;
 }
 
 .by-hangover {
 	font-family: 'Noto Serif KR', serif;
-	font-size: 90%;	
+	font-size: 80%;	
 	color: black;
 	margin-top: 10px;
 }
 
 .by-card {
 	font-family: 'Noto Serif KR', serif;
-	font-size: 90%;	
+	font-size: 80%;	
 	color: white;
 }
 
@@ -205,7 +205,7 @@ a.author-link-card:hover {
   width: 80%;
   height: 60%;
   text-align: left;
-  background: rgba(0, 0, 0, 0.5);
+  //background: rgba(0, 0, 0, 0.5);
   margin: 10%;
   padding-top: 4%;
   padding-left: 4%;
@@ -235,7 +235,7 @@ a.author-link-card:hover {
 
 .deck-text-card {
 	font-family: 'Assistant', serif;
-	font-size: 90%;
+	font-size: 80%;
 	color: white;
 
 }
@@ -251,7 +251,7 @@ a.author-link-card:hover {
 
 .deck-text-simple {
 	font-family: 'Assistant', serif;
-	font-size: 90%;
+	font-size: 80%;
 	color: black;
 	margin: auto;
 }
@@ -373,11 +373,13 @@ a.author-link-card:hover {
 .dance-img {
 	width: 100%;
 	height: 50%;
+	padding-bottom: 6%;
 }
 
 .dancefloor-img {
 	width: 100%;
 	height: 200px;
+	padding-bottom: 6%;
 	padding-top: 40%;
 }
 
@@ -408,8 +410,8 @@ a.author-link-card:hover {
 
 @media screen and (max-width: 800px) {
 	.morty {
-		height: 172.8px;
-		width: 153px;
+		height: 0px;
+		width: 0px;
 	}
 }
 
