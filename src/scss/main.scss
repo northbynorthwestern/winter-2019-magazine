@@ -129,6 +129,7 @@ a.right-corner:hover {
 	font-family: 'Noto Serif KR', serif;
 	font-size: 90%;	
 	color: black;
+	margin-top: 4%;
 }
 
 .by-hangover {
@@ -153,7 +154,7 @@ a.author-link  {
 
 
 a.author-link:hover {
-	color: #FF3727;
+	//color: #FF3727;
 }
 
 a.author-link-card  {
@@ -164,7 +165,7 @@ a.author-link-card  {
 
 
 a.author-link-card:hover {
-	color: #FF3727;
+	//color: #FF3727;
 	//font-size:125%;
 }
 
@@ -365,6 +366,7 @@ a.author-link-card:hover {
 .dancefloor-img {
 	width: 100%;
 	height: 200px;
+	padding-top: 40%;
 }
 
 @media screen and (max-width: 800px) {
