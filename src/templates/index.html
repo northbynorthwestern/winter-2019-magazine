@@ -76,7 +76,8 @@
         <div class="title-row-pregame">
         <p class="upright-text">PREGAME</p>
               <div class="pregame-noods" style="background-image: url('http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2019/03/06/send-noods-card.png');">
-                <p class="headline-text-card">Send Noods</p>
+                <!-- <p class="headline-text-card">Send Noods</p> -->
+                <a class="headline-text-card" href="http://alpha.northbynorthwestern.com/send-noods/">Send Noods</a>
                 <p class="deck-text-card">We tasted all the noodles so you don't have to (but you probably should).</p>
                 <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/daviddeloso/">David Deloso</a> & <a class="author-link-card" href="http://www.northbynorthwestern.com/author/sophialo2/">Sophia Lo</a></p>
               </div>
@@ -84,20 +85,23 @@
               <div>
               <div class="inside-pregame">
               <div class="pregame-small" style="background-image: url('http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2019/03/06/asmr.png');">
-                <p class="headline-text-card">An ASMR Star is Born</p>
+                <!-- <p class="headline-text-card">An ASMR Star is Born</p> -->
+                <a class="headline-text-card" href="http://alpha.northbynorthwestern.com/asmr/">An ASMR Star is Born</a>
                 <p class="deck-text-card">Insight from NU alum and YouTube’s second-most-famous ASMRtist</p>
                 <p class="by-card"> by <a class="author-link-card" href="N/A">Hayley Miller</a></p>
               </div>
 
               <div class="pregame-small" style="background-image: url('http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2019/03/06/tuition-bond-card.png');">
-                <p class="headline-text-card">The name’s Bond, tuition bond</p>
+                <!-- <p class="headline-text-card">The name’s Bond, tuition bond</p> -->
+                <a class="headline-text-card" href="http://alpha.northbynorthwestern.com/the-names-bond-tuition-bond/">The name’s Bond, tuition bond</a>
                 <p class="deck-text-card">How a sweet deal in the 1850s could have gotten you free tuition</p>
                 <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/duncanagnew/">Duncan Agnew</a></p>
               </div>
               </div>
 
               <div class="pregame" style="background-image: url('http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2019/03/06/send-it-back-card.png');">
-                <p class="headline-text-card" style="padding-top: 5%;">Sending it Back</p>
+                <!-- <p class="headline-text-card" style="padding-top: 5%;">Sending it Back</p> -->
+                <a class="headline-text-card" href="http://alpha.northbynorthwestern.com/sending-it-back/">Sending it Back</a>
                 <p class="deck-text-card">Evanston’s own post office is a New Deal relic</p>
                 <p class="by-card"> by <a class="author-link-card" href="http://www.northbynorthwestern.com/author/mollyglick/">Molly Glick</a></p>
               </div>
@@ -130,9 +134,7 @@
         </div>
         </div> -->
 
-<!--         <div class="square-nav"></div> -->
         <hr>
-<!--         <div class="square-nav" id="Dancefloor"></div> -->
 
         <!--Dance Floor-->
         <center class="heading" id="Dancefloor">DANCE FLOOR</center>
@@ -141,9 +143,12 @@
             {% if item.SECTION == "DanceFloor" %}
                 <div class="dancefloor">
                   {% if item.IMAGE_URL %}
+<!--                     <div class="dancefloor-img" style="background-image: url('{{ item.IMAGE_URL }}');">
+                    </div> -->
                     <img src={{ item.IMAGE_URL }} class="dance-img">
                   {% endif %}
-                  <p class="headline-text-simple">{{ item.HEADLINE }}</p>
+                  <!-- <p class="headline-text-simple">{{ item.HEADLINE }}</p> -->
+                  <a class="headline-text-simple" href="{{ item.GHOST_URL }}">{{ item.HEADLINE }}</a>
                   <p class="deck-text-simple">{{ item.DECK }}</p>
                   <p class="by"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
                 </div>
@@ -151,9 +156,7 @@
           {% endfor %}
         </div>
 
-<!--         <div class="square-nav"></div> -->
         <hr>
-<!--         <div class="square-nav" id="Features"></div> -->
 
         <!--Features-->
         <div class="FIRST">
@@ -164,7 +167,8 @@
             {% if item.SECTION == "Features" %}
               <div class="feature-background" style="background-image: url({{ item.IMAGE_URL }});">
                 <div class="feature">
-                  <p class="headline-text-feature" style="padding-left: 5%">{{ item.HEADLINE }}</p>
+                  <!-- <p class="headline-text-feature" style="padding-left: 5%">{{ item.HEADLINE }}</p> -->
+                  <a class="headline-text-feature" href="{{ item.GHOST_URL }}">{{ item.HEADLINE }}</a>
                   <p class="deck-text-card"  style="padding: 10px;">{{ item.DECK }}</p>
                   <p class="by-card" style="padding-left: 5%;"> by <a class="author-link-card" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
                 </div>
@@ -187,7 +191,8 @@
         {% for item in DATA.Sheet1 %}
           {% if item.SECTION == "Hangover" %}
               <div class="hangover">
-                <p class="headline-text-simple">{{ item.HEADLINE }}</p>
+                <!-- <p class="headline-text-simple">{{ item.HEADLINE }}</p> -->
+                <a class="headline-text-simple" href="{{ item.GHOST_URL }}">{{ item.HEADLINE }}</a>
                 <p class="deck-text-simple">{{ item.DECK }}</p>
                 <p class="by-hangover"> by <a class="author-link" href="{{ item.AUTHOR_LINK }}">{{ item.BYLINE }}</a></p>
               </div>
