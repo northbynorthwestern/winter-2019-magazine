@@ -292,7 +292,7 @@ a.author-link-card:hover {
   text-align: left;
   margin-left: 5%;
   padding-left: 2%;
-  margin-top: 6%;
+  margin-top: 3%;
   padding-top: 4%;
 }
 
@@ -301,7 +301,7 @@ a.author-link-card:hover {
   height: 460px;
   background-color: white;
   text-align: left;
-  margin: auto;	
+  //margin: auto;	
   padding-left: 2%;
   padding-top: 4%;
 }
@@ -316,6 +316,18 @@ a.author-link-card:hover {
   		padding-left: 2%;
   		padding-top: 4%;
 	}
+
+	.pregame {
+  		width: 95%;
+  		height: 46%;
+  		background-color: white;
+  		text-align: left;
+  		margin-left: 5%;
+  		padding-left: 2%;
+  		margin-top: 3%;
+  		padding-top: 4%;
+  		margin-bottom: 10%;
+}
 }
 
 
@@ -392,6 +404,13 @@ a.author-link-card:hover {
 .morty {
 	height: 345.6px;
 	width: 306px;
+}
+
+@media screen and (max-width: 800px) {
+	.morty {
+		height: 172.8px;
+		width: 153px;
+	}
 }
 
 .square {
